@@ -18,4 +18,18 @@
       "Write(*)"
     ]
   }
+    "hooks": {
+    "Stop": [
+      {
+        "matcher": "",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "powershell -Command \"Add-Type -AssemblyName System.Windows.Forms; [System.Windows.Forms.MessageBox]::Show('Claude Code has stopped and needs your input', 'Drift');\""
+          }
+        ]
+      }
+    ]
+  }
+
 }
